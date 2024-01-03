@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upadate student's data</title>
+</head> 
+<body>
+    <h1>Students</h1>
+    <h2>Update Data</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6,  offset-md-3" >
+                <div class="card">
+                    <div class="card-body">
+                        <form action= "/students/do-update/{{students.id}}" method="POST">
+                            {% csrf_token %}
+                            <div><label for="firstname"> First Name</label>
+                                <input type="text" id="firstname" class="form-control" name="firstname" value ={{students.firstname}}>
+                            </div>
+                            <div>
+                                <label for="lastname"> Last Name</label>
+                                <input type="text" id="lastname" class="form-control" name="lastname"  value ={{students.lastname}}>
+                            </div>
+                            <div>
+                                <label for="student_id"> student_id</label>
+                                <input type="text" id="student_id" class="form-control" name="student_id"  value ={{students.student_id}}>
+
+                            </div>
+                            <div>
+                                <label for="phy"> Physics</label>
+                                <input type="text" id="phy" class="form-control" name="phy" placeholder="Enter your marks in Physics" value ={{students.phy}}>
+
+                            </div>
+                            <div>
+                                <label for="chem"> Chemistry</label>
+                                <input type="text" id="chem" class="form-control" name="chem" placeholder="Enter your marks in Chemistry" value ={{students.chem}}>
+
+                            </div>
+                            <div>
+                                <label for="bio"> Biology</label>
+                                <input type="text" id="bio" class="form-control" name="bio" placeholder="Enter your marks in Biology" value ={{students.bio}}>
+
+                            </div>
+                            <div>
+                                <label for="maths"> Mathmatics</label>
+                                <input type="text" id="maths" class="form-control" name="maths" placeholder="Enter your marks in maths" value ={{students.maths}}>
+                            <div class="container">
+                                <button class="btn btn primary">submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
